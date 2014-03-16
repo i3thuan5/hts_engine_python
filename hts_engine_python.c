@@ -8,7 +8,7 @@ spam_system(PyObject *self, PyObject *args)
     if (!PyArg_ParseTuple(args, "s", &command))
         return NULL;
      printf("@@\n");
-    sts = mainc(1,NULL);
+    sts = main(1,NULL);
     printf("sts=%d\n",sts);
     return PyLong_FromLong(sts);
 }
@@ -21,7 +21,7 @@ static PyMethodDef SpamMethods[] = {
 
 static struct PyModuleDef spammodule = {
    PyModuleDef_HEAD_INIT,
-   "hello",   /* name of module */
+   "hts_engine_python",   /* name of module */
    NULL, /* module documentation, may be NULL */
    -1,       /* size of per-interpreter state of the module,
                 or -1 if the module keeps state in global variables. */
@@ -29,7 +29,7 @@ static struct PyModuleDef spammodule = {
 };
 
 PyMODINIT_FUNC
-PyInit_hello(void)
+PyInit_hts_engine_python(void)
 {
     return PyModule_Create(&spammodule);
 }

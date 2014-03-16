@@ -4,3 +4,5 @@ Update with newest hts_engine:
 	cd git_data
 	git cvsimport -p x -v -d `pwd`/../csv_data/ hts_engine_API
 	git push ....
+
+	refer:http://ghantoos.org/2010/11/11/migrating-sourceforge-cvs-source-repository-to-github/

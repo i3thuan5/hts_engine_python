@@ -1,4 +1,5 @@
 #include <Python.h>
+#include"bin/hts_engine.c"
 static PyObject *
 spam_system(PyObject *self, PyObject *args)
 {

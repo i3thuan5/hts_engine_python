@@ -1,5 +1,4 @@
 #include <Python.h>
-#include"bin/hts_engine.c"
 static PyObject *
 spam_system(PyObject *self, PyObject *args)
 {
@@ -9,7 +8,8 @@ spam_system(PyObject *self, PyObject *args)
     if (!PyArg_ParseTuple(args, "s", &command))
         return NULL;
      printf("@@\n");
-    sts = main(1,NULL);
+    sts = mainc(1,NULL);
+    printf("sts=%d\n",sts);
     return PyLong_FromLong(sts);
 }
 

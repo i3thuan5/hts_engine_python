@@ -12,10 +12,14 @@ from hts_engine_python import system
 def 讀(檔名):
     return open(os.path.join(os.path.dirname(__file__), 檔名)).read()
 
+檔案 = ['hts_engine_python.c', 'bin/hts_engine.c', ]
+for 檔名 in os.listdir("lib"):
+    if 檔名.endswith('.c'):
+        檔案.append('lib/' + 檔名)
 module1 = Extension('hello',
-                    sources=['hts_engine_python.c', ],
+                    sources=檔案,
 #                     sources = ['bin/hts_engine.c','hts_engine_python/hts_engine.c',],
-                    include_dirs=['include',],
+                    include_dirs=['include', ],
                     library_dirs=['lib'],
                     )
 setup(

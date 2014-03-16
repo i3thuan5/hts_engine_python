@@ -8,7 +8,8 @@ spam_system(PyObject *self, PyObject *args)
 
     if (!PyArg_ParseTuple(args, "s", &command))
         return NULL;
-    sts = system(command);
+     printf("@@\n");
+    sts = main(1,NULL);
     return PyLong_FromLong(sts);
 }
 

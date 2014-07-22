@@ -1,23 +1,53 @@
-===============================================================================
-This package is an extension for whose want to use hts engine by python 3.
+#HTS Engine Python extension
+This package is an extension for whose want to use hts engine by Python 3.
 
-hts_engine_python will update when hts_engine udpates.
+htsengine will update when hts_engine updating.
 
-Update with newest hts_engine:
-	rsync -av --delete rsync://hts-engine.cvs.sourceforge.net/cvsroot/hts-engine/ csv_data
-	mkdir git_data
-	cd git_data
-	git cvsimport -p x -v -d `pwd`/../csv_data/ hts_engine_API
-	git push ....
+##Installation
+```bash
+pip install git+https://github.com/sih4sing5hong5/hts_engine_python.git
+```
+###Uninstallation
+```bash
+pip uninstall htsengine
+```
 
-	refer:http://ghantoos.org/2010/11/11/migrating-sourceforge-cvs-source-repository-to-github/
+##Usage
+See example.py
+```python3
+import htsengine
+model='example/Taiwanese.htsvoice'
+label=[line.rstrip() for line in open('example/full.lab')]
+
+s,f,n,a=htsengine.synthesize(model,label)
+import wave
+wavFile=wave.open('result.wav','wb')
+wavFile.setsampwidth(s)
+wavFile.setframerate(f)
+wavFile.setnchannels(n)
+wavFile.writeframesraw(a)
+wavFile.close()
+```
+
+##Update with newest hts_engine
+```bash
+rsync -av --delete rsync://hts-engine.cvs.sourceforge.net/cvsroot/hts-engine/ csv_data
+mkdir git_data
+cd git_data
+git cvsimport -p x -v -d `pwd`/../csv_data/ hts_engine_API
+git push ....
+```
+refer:http://ghantoos.org/2010/11/11/migrating-sourceforge-cvs-source-repository-to-github/
+
+If I forget to update, please contact me by pull request on github.
+
+Github website: https://github.com/sih4sing5hong5/hts_engine_python
 	
-	If I forget to update, please contact me by pull request on github.
-	
-	Github website: https://github.com/sih4sing5hong5/hts_engine_python
-	
-Author:
+##Author
 	薛丞宏
+	
+##HTS Engine Readme
+
 ===============================================================================
       The HMM-Based Speech Synthesis Engine "hts_engine API" version 1.08
                            release December 25, 2013

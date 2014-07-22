@@ -3,7 +3,7 @@
 #include "HTS_hidden.h"
 
 /* HTS_Engine_return_generated_speech: return generated speech */
-PyObject* HTS_Engine_return_generated_speech(HTS_Engine * engine)
+static PyObject* HTS_Engine_return_generated_speech(HTS_Engine * engine)
 {
 	size_t i;
 	double x;
@@ -93,7 +93,7 @@ static PyMethodDef hts_engine_python_methods[] = {
 
 static struct PyModuleDef hts_engine_python_module = {
    PyModuleDef_HEAD_INIT,
-   "hts_engine_python",   /* name of module */
+   "htsengine",   /* name of module */
    NULL, /* module documentation, may be NULL */
    -1,	   /* size of per-interpreter state of the module,
 				or -1 if the module keeps state in global variables. */

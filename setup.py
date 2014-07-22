@@ -36,7 +36,7 @@ setup(
 		],
 	classifiers = [
 		'Development Status :: 3 - Alpha',
-		'Operating System :: POSIX :: Other',
+		'Operating System :: OS Independent',
 		'Programming Language :: Python :: 3.2',
 		'Programming Language :: Python :: 3.3',
 		'Programming Language :: Python :: 3.4',

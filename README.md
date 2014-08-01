@@ -45,7 +45,26 @@ Github website: https://github.com/sih4sing5hong5/hts_engine_python
 	
 ##Author
 	薛丞宏
-	
+
+##Install HTS Engine Execution Files
+1. Enter the src/ directory.
+2. Run this two commands:
+```bash
+	aclocal
+	autoconf
+```
+3. Generate the ChangeLog file, you choice one command to run:
+```bash
+	git log > ChangeLog # if you have the git version control
+	cvs log > ChangeLog # if you have the cvs version control
+	touch ChangeLog # otherwise
+```
+4. Run this command:
+```bash
+	automake --add-missing
+```
+5. And then see the src/INSTALL file.
+
 ##HTS Engine Readme
 ```
 ===============================================================================

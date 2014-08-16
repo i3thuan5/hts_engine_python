@@ -21,9 +21,9 @@ module = Extension('htsengine',
 
 setup(
 	name = 'htsengine',
-	version = '0.2.0',
+	version = '0.2.1',
 	description = 'An extension for whose want to use hts engine by Python 3',
-	long_description = read_file('README'),
+	long_description = read_file('README.md'),
 	author = '薛丞宏',
 	author_email = 'ihcaoe@gmail.com',
 	url = 'http://hts-engine.sourceforge.net/',

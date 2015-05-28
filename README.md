@@ -1,4 +1,7 @@
 #HTS Engine Python Extension
+
+[![Build Status](https://travis-ci.org/sih4sing5hong5/hts_engine_python.svg?branch=master)](https://travis-ci.org/sih4sing5hong5/hts_engine_python)
+
 This package is an extension for whose want to use hts engine by Python 3.
 
 htsengine will update when hts_engine updating.

@@ -1,0 +1,22 @@
+sudo: false
+language: python
+python:
+ - "3.2"
+ - "3.3"
+ - "3.4"
+env:
+  global:
+  matrix:
+install:
+ - pip install .
+ - pip install coverage
+branches:
+ only:
+  - master
+script:
+ - coverage run example.py
+matrix:
+after_success:
+  - coverage report
+  - pip install --quiet python-coveralls
+  - coveralls

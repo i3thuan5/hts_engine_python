@@ -6,16 +6,17 @@ This package is an extension for whose want to use hts engine by Python 3.
 
 htsengine will update when hts_engine updating.
 
-##Installation
+## Installation
 ```bash
-pip install git+https://github.com/sih4sing5hong5/hts_engine_python.git
+pip install htsengine
 ```
-###Uninstallation
+
+### Uninstallation
 ```bash
 pip uninstall htsengine
 ```
 
-##Usage
+## Usage
 See example.py
 ```python3
 import htsengine
@@ -32,7 +33,7 @@ wavFile.writeframesraw(a)
 wavFile.close()
 ```
 
-##Update with newest hts_engine
+## Update with newest hts_engine
 ```bash
 rsync -av --delete rsync://hts-engine.cvs.sourceforge.net/cvsroot/hts-engine/ csv_data
 mkdir git_data
@@ -45,11 +46,8 @@ refer:http://ghantoos.org/2010/11/11/migrating-sourceforge-cvs-source-repository
 If I forget to update, please contact me by pull request on github.
 
 Github website: https://github.com/sih4sing5hong5/hts_engine_python
-	
-##Author
-	薛丞宏
 
-##Install HTS Engine Execution Files
+## Install HTS Engine Execution Files
 1. Enter the src/ directory.
 2. Run this two commands:
 ```bash

@@ -1,22 +1,29 @@
 sudo: false
 language: python
 python:
- - "3.2"
- - "3.3"
- - "3.4"
+- '3.2'
+- '3.3'
+- '3.4'
 env:
-  global:
-  matrix:
+  global: 
+  matrix: 
 install:
- - pip install .
- - pip install coverage
+- pip install .
+- pip install python-coveralls
 branches:
- only:
+  only:
   - master
 script:
- - coverage run example.py
-matrix:
+- coverage run example.py
+matrix: 
 after_success:
-  - coverage report
-  - pip install --quiet python-coveralls
-  - coveralls
+- coverage report
+- coveralls
+deploy:
+  provider: pypi
+  user: sih4sing5hong5
+  password:
+    secure: ZMIErucnJcngkW5gK8B+/nykwDvyHZvgkgw9bki2xTVm2szEvbS4Tz1NgWpEchFj36irHS46c0gGGLjfNNnJbZHRq0R/uXw56gile+BYW70XYGb7aDbQjZFiOGkoAdXiqjSeC4NnTktx4v7UMMJgMwe2R9Hs0EVOPc9iFbxBZdV9t5luIRg0fDBo6lDdtRTWug/Eh0ivpjNTcLoOCfYgjCoFVZuCZkHHLuSLPo9mjIbtINqL29ZyFGdK3rzv2GeV1l4kaHAIpXgh6Noh0MB/4WbB4+7IzbDHVSazxFAdQZhrYYhIaIRr6HRHT48OyFOtZEAwwS6qGiK06aKgeFzTBH/Nn2Ap0gTzgbLBSEpwVe3mPXqCcjXS9A5oJMRwfFQktef66ggLS1N5dmxwaTfMCCYYTvSceBXoqO6Eyo9sC/lCSn6Et6ljwn+7i2lByBW49w52FUtvOaP1fnXq18+VXMo2rYyZKZ97kOcJwupt5HwtifBA9BJhpvJZu0ByZ4SNlwxX/6nNK9Yce+HBjSLA95+gvj8lJG/0pY1aTCOQYoHo/uBBCr1nygVL8rZhZm2kpdg13zqYUl7ifBV5QtcxVf7CjVBnlkisazyNj0NW2vecC2kR8B5m/oIvTXl7lGeUH5r9eJJw2wFc29m+JG2o8+OlFJDI10mjHTFqOXlRc5w=
+  on:
+    tags: true
+    repo: sih4sing5hong5/hts_engine_python

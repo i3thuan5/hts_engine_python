@@ -38,9 +38,9 @@ setup(
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Operating System :: OS Independent',
-        'Programming Language :: Python :: 3.2',
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
         'Topic :: Scientific/Engineering',
         'Topic :: Scientific/Engineering :: Information Analysis',
     ],

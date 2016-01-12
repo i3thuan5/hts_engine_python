@@ -13,6 +13,7 @@ install:
 branches:
   only:
   - master
+  - /\d+\.\d+\.\d+/
 script:
 - coverage run example/example.py
 matrix: 

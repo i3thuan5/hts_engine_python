@@ -14,7 +14,7 @@ branches:
   only:
   - master
 script:
-- coverage run example.py
+- coverage run example/example.py
 matrix: 
 after_success:
 - coverage report

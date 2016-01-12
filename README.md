@@ -17,15 +17,15 @@ pip uninstall htsengine
 ```
 
 ## Usage
-See example.py
+See `example/example.py`
 ```python3
 import htsengine
-model='example/Taiwanese.htsvoice'
-label=[line.rstrip() for line in open('example/full.lab')]
+model = 'Taiwanese.htsvoice'
+label = [line.rstrip() for line in open('full.lab')]
 
-s,f,n,a=htsengine.synthesize(model,label)
+s, f, n, a = htsengine.synthesize(model, label)
 import wave
-wavFile=wave.open('result.wav','wb')
+wavFile = wave.open('result.wav', 'wb')
 wavFile.setsampwidth(s)
 wavFile.setframerate(f)
 wavFile.setnchannels(n)

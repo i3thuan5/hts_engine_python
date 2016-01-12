@@ -35,11 +35,12 @@ wavFile.close()
 
 ## Update with newest hts_engine
 ```bash
+sudo apt-get install -y git-cvs 
 rsync -av --delete rsync://hts-engine.cvs.sourceforge.net/cvsroot/hts-engine/ csv_data
-mkdir git_data
-cd git_data
-git cvsimport -p x -v -d `pwd`/../csv_data/ hts_engine_API
-git push ....
+git checkout origin
+git cvsimport -p x -v -d `pwd`/csv_data/ hts_engine_API
+git checkout master
+git push origin origin
 ```
 refer:http://ghantoos.org/2010/11/11/migrating-sourceforge-cvs-source-repository-to-github/
 
